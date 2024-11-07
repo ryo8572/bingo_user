@@ -1,0 +1,62 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f2f2f2;
+}
+
+.container {
+    text-align: center;
+}
+
+.bingo-labels {
+    display: grid;
+    grid-template-columns: repeat(5, 60px);
+    grid-gap: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.bingo-card {
+    display: grid;
+    grid-template-columns: repeat(5, 60px);
+    grid-gap: 10px; /* マスの間隔を広げる */
+    margin-top: 10px;
+}
+
+.label {
+    text-align: center;
+    color: #333;
+}
+
+.cell {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    background-color: #ffffff; /* 初期のマスの色を白に */
+    border: 1px solid #333;
+    font-size: 24px;
+    color: black; /* 数字の色を黒に */
+    cursor: pointer;
+}
+
+.cell.selected {
+    background-color: #000000; /* 選択されたマスの色を黒に */
+    color: white; /* 選択されたマスの数字を白に */
+}
+
+.status {
+    margin-top: 20px;
+    font-size: 18px;
+}
